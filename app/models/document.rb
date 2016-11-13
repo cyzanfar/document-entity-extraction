@@ -21,8 +21,9 @@ class Document
 
   def extract_entities
     terms = EntityExtraction.new self.text, Terminology::SUBJECTS
+    return if terminologies = terms.terminologies.nil?
 
-    terms.terminologies.each do |term|
+    terminologies.each do |term|
       tech = Terminology.find_or_create_by(subject: 'technology', name: term)
       self.terminologies << tech
     end
