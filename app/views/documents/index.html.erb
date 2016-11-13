@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="text-center">Listing documents</h1>
+  </div>
+
+  <table class="table">
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.file_file_name %></td>
+        <td><%= link_to 'Show', document, class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_document_path(document), class: 'btn btn-info' %></td>
+        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to 'New Post', new_document_path, class: 'btn btn-default' %>
