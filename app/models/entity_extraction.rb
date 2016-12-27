@@ -25,6 +25,7 @@ class EntityExtraction
   end
 
   def terminologies
-    entities.map{ |term| term[:name] }.uniq!
+    entities.map{ |term| term[:name] }.uniq
   end
 end
+

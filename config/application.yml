@@ -11,7 +11,7 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 development:
-  NEO4J_PASSWORD: "ameneh.22"
+  NEO4J_PASSWORD: ameneh.22
   OPEN_CALAIS_TOKEN: 15A9CZkFESAYddar29NiTQdMfNhqQGuq
 
 production:
